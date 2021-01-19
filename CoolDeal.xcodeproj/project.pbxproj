@@ -3,25 +3,61 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		15307AC325AFDD9F00F5FF54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15307AC225AFDD9F00F5FF54 /* AppDelegate.swift */; };
-		15307AC525AFDD9F00F5FF54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15307AC425AFDD9F00F5FF54 /* ViewController.swift */; };
-		15307AC825AFDD9F00F5FF54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15307AC625AFDD9F00F5FF54 /* Main.storyboard */; };
 		15307ACA25AFDDA000F5FF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15307AC925AFDDA000F5FF54 /* Assets.xcassets */; };
 		15307ACD25AFDDA000F5FF54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15307ACB25AFDDA000F5FF54 /* LaunchScreen.storyboard */; };
+		15307AD625AFDFF100F5FF54 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15307AD525AFDFF100F5FF54 /* HomeController.swift */; };
+		15307AD825AFED7C00F5FF54 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15307AD725AFED7C00F5FF54 /* GoogleService-Info.plist */; };
+		15307ADA25AFF16300F5FF54 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15307AD925AFF16300F5FF54 /* TabBarController.swift */; };
+		15307ADF25B15CC300F5FF54 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15307ADE25B15CC300F5FF54 /* HomeCell.swift */; };
+		15307AE125B15D1300F5FF54 /* ProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15307AE025B15D1300F5FF54 /* ProcessView.swift */; };
+		15307AEB25B15DFF00F5FF54 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15307AE325B15DFE00F5FF54 /* UINavigationController.swift */; };
+		15307AEC25B15DFF00F5FF54 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15307AE425B15DFE00F5FF54 /* UIApplication.swift */; };
+		15307AED25B15DFF00F5FF54 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15307AE525B15DFE00F5FF54 /* UIFont.swift */; };
+		15307AEE25B15DFF00F5FF54 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15307AE625B15DFE00F5FF54 /* String.swift */; };
+		15307AEF25B15DFF00F5FF54 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15307AE725B15DFF00F5FF54 /* CGSize.swift */; };
+		15307AF025B15DFF00F5FF54 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15307AE825B15DFF00F5FF54 /* UIView.swift */; };
+		15307AF125B15DFF00F5FF54 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15307AE925B15DFF00F5FF54 /* UIColor.swift */; };
+		15307AF225B15DFF00F5FF54 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15307AEA25B15DFF00F5FF54 /* UIScrollView.swift */; };
+		15307AF525B15E4500F5FF54 /* HomeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15307AF425B15E4500F5FF54 /* HomeContent.swift */; };
+		156E8D9D25B1707E00CC2671 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156E8D9C25B1707E00CC2671 /* CategoryCell.swift */; };
+		156E8D9F25B1711E00CC2671 /* CategoryBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156E8D9E25B1711E00CC2671 /* CategoryBlockView.swift */; };
+		156E8DA725B1736A00CC2671 /* CategoriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156E8DA625B1736A00CC2671 /* CategoriesCollectionView.swift */; };
+		15CC47A225B5284D004242F2 /* CategoryContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CC47A125B5284D004242F2 /* CategoryContent.swift */; };
+		5ACD78312F53D29DEA8A588E /* Pods_CoolDeal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881A955256732F1ECFE15400 /* Pods_CoolDeal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		15307ABF25AFDD9F00F5FF54 /* CoolDeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolDeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15307AC225AFDD9F00F5FF54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		15307AC425AFDD9F00F5FF54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		15307AC725AFDD9F00F5FF54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15307AC925AFDDA000F5FF54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15307ACC25AFDDA000F5FF54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15307ACE25AFDDA000F5FF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15307AD525AFDFF100F5FF54 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		15307AD725AFED7C00F5FF54 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		15307AD925AFF16300F5FF54 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		15307ADE25B15CC300F5FF54 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		15307AE025B15D1300F5FF54 /* ProcessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessView.swift; sourceTree = "<group>"; };
+		15307AE325B15DFE00F5FF54 /* UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UINavigationController.swift; path = ../../../../../Swift/Achievement/ShopApp/ShopApp/Extensions/UINavigationController.swift; sourceTree = "<group>"; };
+		15307AE425B15DFE00F5FF54 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIApplication.swift; path = ../../../../../Swift/Achievement/ShopApp/ShopApp/Extensions/UIApplication.swift; sourceTree = "<group>"; };
+		15307AE525B15DFE00F5FF54 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIFont.swift; path = ../../../../../Swift/Achievement/ShopApp/ShopApp/Extensions/UIFont.swift; sourceTree = "<group>"; };
+		15307AE625B15DFE00F5FF54 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = ../../../../../Swift/Achievement/ShopApp/ShopApp/Extensions/String.swift; sourceTree = "<group>"; };
+		15307AE725B15DFF00F5FF54 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGSize.swift; path = ../../../../../Swift/Achievement/ShopApp/ShopApp/Extensions/CGSize.swift; sourceTree = "<group>"; };
+		15307AE825B15DFF00F5FF54 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = ../../../../../Swift/Achievement/ShopApp/ShopApp/Extensions/UIView.swift; sourceTree = "<group>"; };
+		15307AE925B15DFF00F5FF54 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = ../../../../../Swift/Achievement/ShopApp/ShopApp/Extensions/UIColor.swift; sourceTree = "<group>"; };
+		15307AEA25B15DFF00F5FF54 /* UIScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIScrollView.swift; path = ../../../../../Swift/Achievement/ShopApp/ShopApp/Extensions/UIScrollView.swift; sourceTree = "<group>"; };
+		15307AF425B15E4500F5FF54 /* HomeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContent.swift; sourceTree = "<group>"; };
+		156E8D9C25B1707E00CC2671 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		156E8D9E25B1711E00CC2671 /* CategoryBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBlockView.swift; sourceTree = "<group>"; };
+		156E8DA625B1736A00CC2671 /* CategoriesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionView.swift; sourceTree = "<group>"; };
+		15CC47A125B5284D004242F2 /* CategoryContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryContent.swift; sourceTree = "<group>"; };
+		19975E423D6D9A3DB85E1AA7 /* Pods-CoolDeal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolDeal.debug.xcconfig"; path = "Target Support Files/Pods-CoolDeal/Pods-CoolDeal.debug.xcconfig"; sourceTree = "<group>"; };
+		881A955256732F1ECFE15400 /* Pods_CoolDeal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolDeal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2CD5ABB91CD478386EF8990 /* Pods-CoolDeal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolDeal.release.xcconfig"; path = "Target Support Files/Pods-CoolDeal/Pods-CoolDeal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ACD78312F53D29DEA8A588E /* Pods_CoolDeal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +77,8 @@
 			children = (
 				15307AC125AFDD9F00F5FF54 /* CoolDeal */,
 				15307AC025AFDD9F00F5FF54 /* Products */,
+				E5FDF4565490D4254461A171 /* Pods */,
+				3F5EF5F85D562B0370A74171 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +94,78 @@
 			isa = PBXGroup;
 			children = (
 				15307AC225AFDD9F00F5FF54 /* AppDelegate.swift */,
-				15307AC425AFDD9F00F5FF54 /* ViewController.swift */,
-				15307AC625AFDD9F00F5FF54 /* Main.storyboard */,
+				15307ADB25B0059F00F5FF54 /* Views */,
+				15307AF325B15E3600F5FF54 /* Models */,
+				15307AD425AFDFBA00F5FF54 /* Controllers */,
+				15307AE225B15D5900F5FF54 /* Extensions */,
 				15307AC925AFDDA000F5FF54 /* Assets.xcassets */,
 				15307ACB25AFDDA000F5FF54 /* LaunchScreen.storyboard */,
 				15307ACE25AFDDA000F5FF54 /* Info.plist */,
+				15307AD725AFED7C00F5FF54 /* GoogleService-Info.plist */,
 			);
 			path = CoolDeal;
+			sourceTree = "<group>";
+		};
+		15307AD425AFDFBA00F5FF54 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				15307AD925AFF16300F5FF54 /* TabBarController.swift */,
+				15307AD525AFDFF100F5FF54 /* HomeController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		15307ADB25B0059F00F5FF54 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				156E8D9E25B1711E00CC2671 /* CategoryBlockView.swift */,
+				15307ADE25B15CC300F5FF54 /* HomeCell.swift */,
+				15307AE025B15D1300F5FF54 /* ProcessView.swift */,
+				156E8D9C25B1707E00CC2671 /* CategoryCell.swift */,
+				156E8DA625B1736A00CC2671 /* CategoriesCollectionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		15307AE225B15D5900F5FF54 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				15307AE725B15DFF00F5FF54 /* CGSize.swift */,
+				15307AE625B15DFE00F5FF54 /* String.swift */,
+				15307AE425B15DFE00F5FF54 /* UIApplication.swift */,
+				15307AE925B15DFF00F5FF54 /* UIColor.swift */,
+				15307AE525B15DFE00F5FF54 /* UIFont.swift */,
+				15307AE325B15DFE00F5FF54 /* UINavigationController.swift */,
+				15307AEA25B15DFF00F5FF54 /* UIScrollView.swift */,
+				15307AE825B15DFF00F5FF54 /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		15307AF325B15E3600F5FF54 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				15307AF425B15E4500F5FF54 /* HomeContent.swift */,
+				15CC47A125B5284D004242F2 /* CategoryContent.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3F5EF5F85D562B0370A74171 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				881A955256732F1ECFE15400 /* Pods_CoolDeal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5FDF4565490D4254461A171 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19975E423D6D9A3DB85E1AA7 /* Pods-CoolDeal.debug.xcconfig */,
+				B2CD5ABB91CD478386EF8990 /* Pods-CoolDeal.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15307AD125AFDDA000F5FF54 /* Build configuration list for PBXNativeTarget "CoolDeal" */;
 			buildPhases = (
+				0F6DB901E9242ABE0683D853 /* [CP] Check Pods Manifest.lock */,
 				15307ABB25AFDD9F00F5FF54 /* Sources */,
 				15307ABC25AFDD9F00F5FF54 /* Frameworks */,
 				15307ABD25AFDD9F00F5FF54 /* Resources */,
+				049BC9BD801B9D91BB58F253 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,33 +230,83 @@
 			files = (
 				15307ACD25AFDDA000F5FF54 /* LaunchScreen.storyboard in Resources */,
 				15307ACA25AFDDA000F5FF54 /* Assets.xcassets in Resources */,
-				15307AC825AFDD9F00F5FF54 /* Main.storyboard in Resources */,
+				15307AD825AFED7C00F5FF54 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		049BC9BD801B9D91BB58F253 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoolDeal/Pods-CoolDeal-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoolDeal/Pods-CoolDeal-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoolDeal/Pods-CoolDeal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0F6DB901E9242ABE0683D853 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoolDeal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		15307ABB25AFDD9F00F5FF54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15307AC525AFDD9F00F5FF54 /* ViewController.swift in Sources */,
+				15307AEF25B15DFF00F5FF54 /* CGSize.swift in Sources */,
+				15307AEC25B15DFF00F5FF54 /* UIApplication.swift in Sources */,
+				15307AE125B15D1300F5FF54 /* ProcessView.swift in Sources */,
+				156E8DA725B1736A00CC2671 /* CategoriesCollectionView.swift in Sources */,
+				15307AEE25B15DFF00F5FF54 /* String.swift in Sources */,
+				15307AF025B15DFF00F5FF54 /* UIView.swift in Sources */,
+				15307AF225B15DFF00F5FF54 /* UIScrollView.swift in Sources */,
+				156E8D9F25B1711E00CC2671 /* CategoryBlockView.swift in Sources */,
+				15307ADA25AFF16300F5FF54 /* TabBarController.swift in Sources */,
+				15CC47A225B5284D004242F2 /* CategoryContent.swift in Sources */,
+				15307AD625AFDFF100F5FF54 /* HomeController.swift in Sources */,
 				15307AC325AFDD9F00F5FF54 /* AppDelegate.swift in Sources */,
+				15307AF125B15DFF00F5FF54 /* UIColor.swift in Sources */,
+				156E8D9D25B1707E00CC2671 /* CategoryCell.swift in Sources */,
+				15307ADF25B15CC300F5FF54 /* HomeCell.swift in Sources */,
+				15307AEB25B15DFF00F5FF54 /* UINavigationController.swift in Sources */,
+				15307AED25B15DFF00F5FF54 /* UIFont.swift in Sources */,
+				15307AF525B15E4500F5FF54 /* HomeContent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		15307AC625AFDD9F00F5FF54 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				15307AC725AFDD9F00F5FF54 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		15307ACB25AFDDA000F5FF54 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -280,11 +436,13 @@
 		};
 		15307AD225AFDDA000F5FF54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19975E423D6D9A3DB85E1AA7 /* Pods-CoolDeal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6SRX5NN73H;
 				INFOPLIST_FILE = CoolDeal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +456,13 @@
 		};
 		15307AD325AFDDA000F5FF54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2CD5ABB91CD478386EF8990 /* Pods-CoolDeal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6SRX5NN73H;
 				INFOPLIST_FILE = CoolDeal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
