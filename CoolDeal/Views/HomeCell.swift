@@ -41,7 +41,7 @@ class HomeCell: UICollectionViewCell {
     let topLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.semibold)
+        label.font = UIFont.systemFont(ofSize: 14)
         label.textAlignment = NSTextAlignment.center
         
         return label

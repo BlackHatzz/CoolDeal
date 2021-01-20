@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 
+var customer: Customer = Customer(id: nil, firstname: nil, lastname: nil, email: nil)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

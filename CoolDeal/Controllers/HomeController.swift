@@ -18,7 +18,6 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
         label.backgroundColor = UIColor.clear
         label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         label.textAlignment = NSTextAlignment.center
-//        label.text = "CHOOSE YOUR CATEGORY"
         typealias Key = NSMutableAttributedString.Key
         let attributedText = NSMutableAttributedString(string: "CHOOSE YOUR CATEGORY", attributes: [Key.kern: 1.5, Key.font : UIFont.systemFont(ofSize: 18, weight: .medium)])
         
@@ -73,19 +72,19 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
         mainScrollView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
         mainScrollView.contentSize = CGSize(width: view.frame.width, height: 4000)
         
-        mainScrollView.addSubview(topLabel)
-        mainScrollView.addSubview(categoriesCollectionView)
-        
-        topLabel.topAnchor.constraint(equalTo: mainScrollView.topAnchor, constant: 24).isActive = true
-        topLabel.centerXAnchor.constraint(equalTo: mainScrollView.centerXAnchor).isActive = true
-//        topLabel.left.constraint(equalTo: mainScrollView.topAnchor).isActive = true
-//        topLabel.topAnchor.constraint(equalTo: mainScrollView.topAnchor).isActive = true
-//        topLabel.topAnchor.constraint(equalTo: mainScrollView.topAnchor).isActive = true
-        
-        categoriesCollectionView.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 24).isActive = true
-        categoriesCollectionView.leftAnchor.constraint(equalTo: mainScrollView.leftAnchor, constant: 12).isActive = true
-        categoriesCollectionView.widthAnchor.constraint(equalTo: mainScrollView.widthAnchor, constant: -12*2).isActive = true
-        categoriesCollectionView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+//        mainScrollView.addSubview(topLabel)
+//        mainScrollView.addSubview(categoriesCollectionView)
+//
+//        topLabel.topAnchor.constraint(equalTo: mainScrollView.topAnchor, constant: 24).isActive = true
+//        topLabel.centerXAnchor.constraint(equalTo: mainScrollView.centerXAnchor).isActive = true
+////        topLabel.left.constraint(equalTo: mainScrollView.topAnchor).isActive = true
+////        topLabel.topAnchor.constraint(equalTo: mainScrollView.topAnchor).isActive = true
+////        topLabel.topAnchor.constraint(equalTo: mainScrollView.topAnchor).isActive = true
+//
+//        categoriesCollectionView.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 24).isActive = true
+//        categoriesCollectionView.leftAnchor.constraint(equalTo: mainScrollView.leftAnchor, constant: 12).isActive = true
+//        categoriesCollectionView.widthAnchor.constraint(equalTo: mainScrollView.widthAnchor, constant: -12*2).isActive = true
+//        categoriesCollectionView.heightAnchor.constraint(equalToConstant: 300).isActive = true
         
         // show loading view when no data
 //        view.addSubview(loadingView)
@@ -107,7 +106,7 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Setup Autolayout constraints
         eventsCollectionView.translatesAutoresizingMaskIntoConstraints = false
         
-        eventsCollectionView.topAnchor.constraint(equalTo: categoriesCollectionView.bottomAnchor, constant: 24).isActive = true
+        eventsCollectionView.topAnchor.constraint(equalTo: mainScrollView.topAnchor, constant: 0).isActive = true
         eventsCollectionView.leftAnchor.constraint(equalTo: mainScrollView.leftAnchor, constant: 0).isActive = true
         eventsCollectionView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: 0).isActive = true
         eventsCollectionView.heightAnchor.constraint(equalToConstant: 1000).isActive = true
@@ -147,8 +146,12 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return sampleData.count
     }
+    
+    let sampleData = [
+        "home-0", "home-1", "home-2", "home-bag", "home-beach"
+    ]
     
     init() {
         // Create new `UICollectionView` and set `UICollectionViewFlowLayout` as its layout
@@ -165,10 +168,13 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         if indexPath.row == 0 {
             cell.style = .topContent
-            cell.topLabel.attributedText = NSMutableAttributedString(string: "ORDER NOW", attributes: [NSAttributedString.Key.kern : 1.5, NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.semibold)])
+            cell.topLabel.text = "Order Now"//attributedText = NSMutableAttributedString(string: "ORDER NOW", attributes: [NSAttributedString.Key.kern : 1.5, NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.semibold)])
         } else {
             cell.style = .default
         }
+        
+        cell.imageView.image = UIImage(named: sampleData[indexPath.row])
+        cell.imageStatus = .loaded
 //
 //        if let image = homeContents[indexPath.row].image {
 //            cell.imageView.image = image
