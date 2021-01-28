@@ -55,7 +55,7 @@ class ProductDetailController: UIViewController, UIScrollViewDelegate, UICollect
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        
+        collectionView.backgroundColor = UIColor.clear
         return collectionView
     }()
     let productPageControl: UIPageControl = {
@@ -65,6 +65,7 @@ class ProductDetailController: UIViewController, UIScrollViewDelegate, UICollect
         pageControl.hidesForSinglePage = true
         pageControl.pageIndicatorTintColor = UIColor.lightGray
         pageControl.isUserInteractionEnabled = false
+        pageControl.backgroundColor = UIColor.clear
         return pageControl
     }()
     let colorTitleLabel: UILabel = {
@@ -83,7 +84,6 @@ class ProductDetailController: UIViewController, UIScrollViewDelegate, UICollect
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = UIColor.clear
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = UIColor.clear
         return collectionView
     }()
     
@@ -169,7 +169,9 @@ class ProductDetailController: UIViewController, UIScrollViewDelegate, UICollect
     // --------------------------------------------------------------------------------
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return product?.imageUrls[currentIndexProductImages]?.count ?? 0
+//        return product?.imageUrls[currentIndexProductImages]?.count ?? 0
+        return product?.images[0]?.count ?? 0
+//        return 2
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.view.frame.width, height: 400)
@@ -228,7 +230,7 @@ class ProductDetailController: UIViewController, UIScrollViewDelegate, UICollect
 //            self.setContent()
 //        }
 //
-//        self.productPageControl.numberOfPages = product.imageUrls[currentIndexProductImages]?.count ?? 0
+        self.productPageControl.numberOfPages = product?.images[0]?.count ?? 0//product.imageUrls[currentIndexProductImages]?.count ?? 0
 //
 //        // download missed image of current product
 //        // get the quantity of images and imageUrls
@@ -265,6 +267,9 @@ class ProductDetailController: UIViewController, UIScrollViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         typealias key = Product.InfoKey
+        
+        self.navigationItem.title = "DOLCE"
+        productNameLabel.text = "PILOT MINI COLOR-BLOCK LEATHER SHOUDLER BAG"
         
         // when select a option in colorMenu
         self.colorMenu.didSelectItemHandler = {(_, indexPath) in
@@ -338,15 +343,15 @@ class ProductDetailController: UIViewController, UIScrollViewDelegate, UICollect
         }
         
         print("add to bag")
-        if self.sizeCollectionView.selectedSize == nil && product?.sizes != nil {
-            print("no size")
-            if notificationLabel.isHidden {
-                changeNotificationLabelStatus(withContent: "Please select a size", isHidden: false)
-            } else {
-                notificationLabel.text = "Please select a size"
-            }
-            
-        } else {
+//        if self.sizeCollectionView.selectedSize == nil && product?.sizes != nil {
+//            print("no size")
+//            if notificationLabel.isHidden {
+//                changeNotificationLabelStatus(withContent: "Please select a size", isHidden: false)
+//            } else {
+//                notificationLabel.text = "Please select a size"
+//            }
+//
+//        } else {
             print("size")
             
             if let product = product {
@@ -359,15 +364,15 @@ class ProductDetailController: UIViewController, UIScrollViewDelegate, UICollect
                 
                 let id: String = product.id
                 let image: UIImage = product.images[currentIndexProductImages]![0]!
-                let designer: String = product.designer!
+                let brand: String = product.brand!
                 let name: String = product.name!
                 
                 // if product only has 1 specific size
                 var size: String = "--"
-                if product.sizes != nil {
-                    // if product has many sizes
-                    size = self.sizeCollectionView.selectedSize!
-                }
+//                if product.sizes != nil {
+//                    // if product has many sizes
+//                    size = self.sizeCollectionView.selectedSize!
+//                }
                 
                 let color: String = product.textColors![currentIndexProductImages]
                 let price: NSNumber = product.price!
@@ -375,14 +380,14 @@ class ProductDetailController: UIViewController, UIScrollViewDelegate, UICollect
                 let status: String = product.status!
                 let quantity: NSNumber = 1
                 
-                let shoppingItem = ShoppingItem(id: id, image: image, designer: designer, name: name, size: size, color: color, price: price, discount: discount, status: status, quantity: quantity)
+                let shoppingItem = ShoppingItem(id: id, image: image, designer: brand, name: name, size: size, color: color, price: price, discount: discount, status: status, quantity: quantity)
                 customer.add(to: bagType!, withItem: shoppingItem)
                 
             } else {
                 assertionFailure("product cannot be nil")
             }
             
-        }
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -412,7 +417,7 @@ class ProductDetailController: UIViewController, UIScrollViewDelegate, UICollect
         
         // set all info of product
         
-        self.navigationItem.title = product.designer
+        self.navigationItem.title = product.brand
         
         if let name = product.name {
             self.productNameLabel.customedText = name
@@ -493,7 +498,7 @@ class ProductDetailController: UIViewController, UIScrollViewDelegate, UICollect
     private func setupViews() {
         view.addSubview(scrollView)
         self.view.addSubview(notificationLabel)
-        
+        productPageControl.isHidden = false
         // setup notification label
         notificationLabel.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         notificationLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -571,8 +576,8 @@ class ProductDetailController: UIViewController, UIScrollViewDelegate, UICollect
         productContainerView.addConstraints(withFormat: "H:|[v0(v2)][v1(1)][v2]|", views: callUsButton, dividerLineView2, emailUsButton)
         productContainerView.addConstraints(withFormat: "H:|[v0]|", views: dividerLineView3)
         
-        productContainerView.addConstraints(withFormat: "V:|-8-[v0(\(nameEstimatedSizeForNameLabel.height))]-8-[v1(400)]-4-[v2(14)]-12-[v3(\(product?.hexColors == nil ? 1 : 40))]-14-[v4(22)]-8-[v5(20)]", views: productNameLabel, productCollectionView, productPageControl, colorMenu, discountPriceLabel, olddiscountPriceLabel)
-        productContainerView.addConstraints(withFormat: "V:[v0]-12-[v1(\(product?.hexColors == nil ? 1 : 40))]", views: productPageControl, colorTitleLabel)
+        productContainerView.addConstraints(withFormat: "V:|-8-[v0(\(nameEstimatedSizeForNameLabel.height))]-8-[v1(400)]-4-[v2(14)]-12-[v3(40)]-14-[v4(22)]-8-[v5(20)]", views: productNameLabel, productCollectionView, productPageControl, colorMenu, discountPriceLabel, olddiscountPriceLabel)
+        productContainerView.addConstraints(withFormat: "V:[v0]-12-[v1(40)]", views: productPageControl, colorTitleLabel)
         productContainerView.addConstraints(withFormat: "V:[v0]-8-[v1(20)]", views: discountPriceLabel, discountLabel)
         
         productContainerView.addConstraints(withFormat: "V:[v0]-18-[v1(\(product?.sizes == nil ? 1 : 40))]-18-[v2(16)]-18-[v3(44)]-12-[v4(44)]-24-[v5(\(estimatedSize1.height))]-36-[v6(18)]-12-[v7(18)]-12-[v8(18)]-24-[v9(\(estimatedSize2.height))]-36-[v10(1)][v11(80)][v12(1)]", views: olddiscountPriceLabel, sizeCollectionView, productStatusLabel, addToBagButton, addToWishListButton, productDetailInfo, productCompositionLabel, productCodeLabel, productColorLabel, productSizeAndFitInfo, dividerLineView1, callUsButton, dividerLineView3)

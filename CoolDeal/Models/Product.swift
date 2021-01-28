@@ -26,7 +26,7 @@ class Product: NSObject {
     var detail: String?
     var sizeAndFit: String?
     var category: String?
-    var designer: String?
+    var brand: String?
     var status: String?
     var composition: [String]?
     var hexColors: [String]?
@@ -35,8 +35,24 @@ class Product: NSObject {
     
     override init(){
         self.id = "thisIsId"
+        self.name = "product name"
         self.imageUrls = [Int: [String]]()
-        self.quantity = 2
+        self.sizes = []
+        self.price = 200
+        self.discount = 50
+        self.quantity = 5
+        self.detail = "this is detail"
+        self.sizeAndFit = "this is size and fit"
+        self.category = "this is category"
+        self.brand = "this is brand"
+        self.status = "this is status"
+        self.composition = ["this is comp"]
+        self.hexColors = ["012345"]
+        self.textColors = ["some colors"]
+        self.images = [0 : [0 : UIImage(named: "4-0"),
+                                      1 : UIImage(named: "4-1"),
+                                      2 : UIImage(named: "4-2"),
+                                      3 : UIImage(named: "4-3")]] as! [Int : [Int : UIImage]]
     }
     
     init(id: String, productInfo: [String: Any]) {
@@ -63,7 +79,7 @@ class Product: NSObject {
         self.detail = productInfo[key.detail] as? String
         self.sizeAndFit = productInfo[key.sizeAndFit] as? String
         self.category = productInfo[key.category] as? String
-        self.designer = productInfo[key.designer] as? String
+        self.brand = productInfo[key.designer] as? String
         self.status = productInfo[key.status] as? String
         self.composition = productInfo[key.composition] as? [String]
         self.hexColors = productInfo[key.hexColors] as? [String]

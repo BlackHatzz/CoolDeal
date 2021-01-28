@@ -17,7 +17,7 @@ class BrandsController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // setupViews
-        view.addSubview(loadingView)
+//        view.addSubview(loadingView)
         
         headers = ["A", "B", "C", "D"]
         datas = [

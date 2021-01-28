@@ -23,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
+        let navBarItem = UIBarButtonItem.appearance()
+        navBarItem.tintColor = UIColor.black
+        
         let controller = TabBarController()
 //        let nav = UINavigationController(rootViewController: controller)
         window?.rootViewController = controller

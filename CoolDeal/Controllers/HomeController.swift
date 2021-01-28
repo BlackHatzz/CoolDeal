@@ -194,10 +194,8 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //        let viewController = ProductViewController(collectionViewLayout: UICollectionViewFlowLayout())
-//        let viewController = ProductViewController(category: nil)
-        //        let navController = UINavigationController(rootViewController: viewController)
-//        self.navigationController?.pushViewController(viewController, animated: true)
+        let viewController = ProductController()
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     

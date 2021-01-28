@@ -18,14 +18,6 @@ class TabBarController: UITabBarController {
         homeNav.navigationBar.isTranslucent = false
         homeNav.navigationBar.tintColor = UIColor.white
         
-        let homeController2 = ProductController()
-//        homeController2.view.backgroundColor = UIColor.red
-        let homeNav2 = UINavigationController(rootViewController: homeController2)
-        homeNav2.title = "More"
-        homeNav2.tabBarItem.image = UIImage(named: "more")
-        homeNav2.navigationBar.isTranslucent = false
-        homeNav2.navigationBar.tintColor = UIColor.white
-        
         let brandsController = BrandsController()
         //        homeController2.view.backgroundColor = UIColor.red
         let brandNav = UINavigationController(rootViewController: brandsController)
@@ -42,15 +34,8 @@ class TabBarController: UITabBarController {
         cateNav.navigationBar.isTranslucent = false
         cateNav.navigationBar.tintColor = UIColor.white
         
-        let productDetailController = ProductDetailController()
-        //        homeController2.view.backgroundColor = UIColor.red
-        let productDetailNav = UINavigationController(rootViewController: productDetailController)
-        productDetailNav.title = "zz"
-        productDetailNav.tabBarItem.image = UIImage(named: "cate")
-        productDetailNav.navigationBar.isTranslucent = false
-        productDetailNav.navigationBar.tintColor = UIColor.white
         
-        viewControllers = [homeNav, homeNav2, brandNav, cateNav, productDetailNav]
+        viewControllers = [homeNav, brandNav, cateNav]
         self.tabBar.isTranslucent = false
         UITabBar.appearance().tintColor = UIColor.black
 //        self.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 6, bottom: -6, right: -6)

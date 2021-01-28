@@ -65,19 +65,20 @@ class ProductController: UIViewController, UICollectionViewDelegate, UICollectio
     @objc func handleRightNavBarItem(_ sender: UIButton) {
         print("sender", sender.tag)
         
-//        switch sender.tag {
-//        case 1:
-//            // searchButton
-////            let viewController = SearchingController()
-////            let navigationController = UINavigationController(rootViewController: viewController)
-////            self.navigationController?.present(navigationController, animated: true, completion: nil)
-//        case 2:
-////            let viewController = BagController()
-////            let navigationController = UINavigationController(rootViewController: viewController)
-////            self.navigationController?.present(navigationController, animated: true, completion: nil)
-//        default:
-//            assertionFailure("Action is not supported")
-//        }
+        switch sender.tag {
+        case 1:
+            // searchButton
+//            let viewController = SearchingController()
+//            let navigationController = UINavigationController(rootViewController: viewController)
+//            self.navigationController?.present(navigationController, animated: true, completion: nil)
+            print("case 1")
+        case 2:
+            let viewController = BagController()
+            let navigationController = UINavigationController(rootViewController: viewController)
+            self.navigationController?.present(navigationController, animated: true, completion: nil)
+        default:
+            assertionFailure("Action is not supported")
+        }
         
     }
     
@@ -123,6 +124,13 @@ class ProductController: UIViewController, UICollectionViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width / 2 - 10, height: 350)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let product = Product()
+        
+        let viewController = ProductDetailController(ofProduct: product)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
 // --------------------------------------------------------------------------

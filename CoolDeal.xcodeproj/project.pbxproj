@@ -41,6 +41,9 @@
 		156E8D9D25B1707E00CC2671 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156E8D9C25B1707E00CC2671 /* CategoryCell.swift */; };
 		156E8D9F25B1711E00CC2671 /* CategoryBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156E8D9E25B1711E00CC2671 /* CategoryBlockView.swift */; };
 		156E8DA725B1736A00CC2671 /* CategoriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156E8DA625B1736A00CC2671 /* CategoriesCollectionView.swift */; };
+		158C652425BE91F300A8CB17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158C652325BE91F300A8CB17 /* ViewController.swift */; };
+		15CB791B25C25E36009F693D /* BagController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CB791A25C25E36009F693D /* BagController.swift */; };
+		15CB791D25C25F08009F693D /* PanDirectionGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CB791C25C25F08009F693D /* PanDirectionGestureRecognizer.swift */; };
 		15CC47A225B5284D004242F2 /* CategoryContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CC47A125B5284D004242F2 /* CategoryContent.swift */; };
 		5ACD78312F53D29DEA8A588E /* Pods_CoolDeal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881A955256732F1ECFE15400 /* Pods_CoolDeal.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +85,9 @@
 		156E8D9C25B1707E00CC2671 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		156E8D9E25B1711E00CC2671 /* CategoryBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBlockView.swift; sourceTree = "<group>"; };
 		156E8DA625B1736A00CC2671 /* CategoriesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionView.swift; sourceTree = "<group>"; };
+		158C652325BE91F300A8CB17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		15CB791A25C25E36009F693D /* BagController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagController.swift; sourceTree = "<group>"; };
+		15CB791C25C25F08009F693D /* PanDirectionGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanDirectionGestureRecognizer.swift; sourceTree = "<group>"; };
 		15CC47A125B5284D004242F2 /* CategoryContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryContent.swift; sourceTree = "<group>"; };
 		19975E423D6D9A3DB85E1AA7 /* Pods-CoolDeal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolDeal.debug.xcconfig"; path = "Target Support Files/Pods-CoolDeal/Pods-CoolDeal.debug.xcconfig"; sourceTree = "<group>"; };
 		881A955256732F1ECFE15400 /* Pods_CoolDeal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolDeal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +113,7 @@
 				15CC47A125B5284D004242F2 /* CategoryContent.swift */,
 				15020D3725B7F54A0029C034 /* Customer.swift */,
 				15020D3C25B7F5B60029C034 /* ShippingItem.swift */,
+				15CB791C25C25F08009F693D /* PanDirectionGestureRecognizer.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -155,6 +162,8 @@
 				15020D2725B6ACA00029C034 /* BrandsController.swift */,
 				15020D2925B6E8FA0029C034 /* CategoriesController.swift */,
 				15020D2B25B7EDE80029C034 /* ProductDetailController.swift */,
+				158C652325BE91F300A8CB17 /* ViewController.swift */,
+				15CB791A25C25E36009F693D /* BagController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -340,6 +349,7 @@
 				156E8DA725B1736A00CC2671 /* CategoriesCollectionView.swift in Sources */,
 				15020D3625B7F47C0029C034 /* SlideProductCell.swift in Sources */,
 				15020D2A25B6E8FA0029C034 /* CategoriesController.swift in Sources */,
+				15CB791D25C25F08009F693D /* PanDirectionGestureRecognizer.swift in Sources */,
 				15020D2E25B7F2290029C034 /* ProductCollectionView.swift in Sources */,
 				15307AEE25B15DFF00F5FF54 /* String.swift in Sources */,
 				15307AF025B15DFF00F5FF54 /* UIView.swift in Sources */,
@@ -348,10 +358,12 @@
 				15307ADA25AFF16300F5FF54 /* TabBarController.swift in Sources */,
 				15CC47A225B5284D004242F2 /* CategoryContent.swift in Sources */,
 				15307AD625AFDFF100F5FF54 /* HomeController.swift in Sources */,
+				158C652425BE91F300A8CB17 /* ViewController.swift in Sources */,
 				15307AC325AFDD9F00F5FF54 /* AppDelegate.swift in Sources */,
 				15307AF125B15DFF00F5FF54 /* UIColor.swift in Sources */,
 				15020D2825B6ACA00029C034 /* BrandsController.swift in Sources */,
 				156E8D9D25B1707E00CC2671 /* CategoryCell.swift in Sources */,
+				15CB791B25C25E36009F693D /* BagController.swift in Sources */,
 				15020D2C25B7EDE80029C034 /* ProductDetailController.swift in Sources */,
 				15020D3D25B7F5B60029C034 /* ShippingItem.swift in Sources */,
 				15020D2225B69D3E0029C034 /* ProductController.swift in Sources */,
@@ -506,7 +518,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6SRX5NN73H;
 				INFOPLIST_FILE = CoolDeal/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,7 +538,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6SRX5NN73H;
 				INFOPLIST_FILE = CoolDeal/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
